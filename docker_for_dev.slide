@@ -1,0 +1,78 @@
+Introducción a Docker para devs:
+Usando Docker para facilitar el desarrollo de aplicaciones
+13 Sep 2019
+Tags: docker, python, development
+
+Ider Delzo
+Software Developer, Xapo
+soloidx@gmail.com
+@soloidx
+
+* Un ejemplo practico...
+`./scripts/ex01/www/index.php`
+.code ./scripts/ex01/www/index.php /START OMIT/,/END OMIT/
+
+Ejecutar:
+.play ./scripts/ex01/init_php.sh /START OMIT/,/END OMIT/
+
+Probar:
+.link http://localhost:8080
+
+* Que pasó?
+
+.image ./imgs/surprised_pikachu.png
+.caption images by [[http://images.google.com]]
+
+* Docker?
+.image ./imgs/docker_logo.png _ 300
+Docker es una herramienta que permite crear, ejecutar, y publicar aplicaciones usando _contenedores_.
+
+Un contenedor es un empaquetado de dependencias y librerías que junto con la aplicación te permite ejecutarlo como una unidad virtualizada.
+
+* Docker vs Virtualbox, vmWare, etc.
+
+*** Virtualbox:
+
+- La virtalización ocurre a nivel de todo el sistema operativo
+- Permite el uso de entornos graficos
+
+*** Docker:
+
+- La virtualización ocurre a nivel de contenedor, esto la hace mas eficiente y seguro
+- Permite darnos flexibilidad con la arquitectura
+- Facil de crear servicios y eliminarlos, perfecto para probar nuevas instancias o experimentar
+- es complicado usar aplicaciones con interfaz grafica
+
+* Docker vs Vagrant
+
+*** Vagrant:
+
+- La configuracion es como si fuera un sistema operativo
+- En desarrollo en trabajo es siempre sobre una VM (Virtualbox)
+
+*** Docker:
+
+- Docker eficientemente usa muchas cosas del sistema host (Linux)
+- Si bien en otros SO usa una maquina virtual, ésta se maneja mas eficientemente
+- Permite escalar varias copias del mismo servicio sin mucho esfuerzo
+
+* Anatomia de un contenedor
+
+.image ./imgs/docker-image.png
+.caption images by [[http://blog.jayway.com]]
+
+* Ejemplos practicos
+
+* Dockerfile
+
+Es un archivo en donde ponemos las especificaciones de nuestro contenedor, ponemos una imagen de base y añadimos las instrucciones con las dependencias Y el comando de ejecución inicial.
+
+* Docker-composer
+
+Es una herramienta que viene con Docker y permite _orquestar_ muchos contenedores.
+
+Con Docker-composer podemos conectar diferentes servicios individuales y hacer que interactuen dentro de una misma red.
+
+Docker-compose utiliza un archivo llamado `docker-compose.yml` en donde se especifica los servicios y la configuración que tendrá toda la infraestructura.
+
+* Como armar una arquiectura con docker-composer
