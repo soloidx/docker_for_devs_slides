@@ -63,6 +63,8 @@ Un contenedor es un empaquetado de dependencias y librerías que junto con la ap
 
 * Ejemplos practicos
 
+.code ./scripts/ex02/docker_commands.sh /START OMIT/,/END OMIT/
+
 * Dockerfile
 
 Es un archivo en donde ponemos las especificaciones de nuestro contenedor, ponemos una imagen de base y añadimos las instrucciones con las dependencias Y el comando de ejecución inicial.
